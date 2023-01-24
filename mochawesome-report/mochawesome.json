@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-24T06:31:20.823Z",
+    "end": "2023-01-24T06:31:21.952Z",
+    "duration": 1129,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2918baf7-0b26-41bc-b204-d8fbeb60c3de",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb29e01e-0c39-4721-801c-abb23ee10fbf",
+          "title": "DELETE API Request Tests",
+          "fullFile": "/Users/hemilturakhia/Desktop/api-testing-axios-mocha-chai-javascript/api-test/delete_request.js",
+          "file": "/api-test/delete_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to delete user",
+              "fullTitle": "DELETE API Request Tests should be able to delete user",
+              "timedOut": false,
+              "duration": 489,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.delete(properties.get(\"baseUri\") +'/users/7')\nconsole.log(res.data);\nexpect(res.status).equal(204)",
+              "err": {},
+              "uuid": "b300b2d6-9eee-4437-81cf-d74b50be647f",
+              "parentUUID": "bb29e01e-0c39-4721-801c-abb23ee10fbf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b300b2d6-9eee-4437-81cf-d74b50be647f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 489,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "f98c258b-4b55-42bd-8c15-f5cf4e7f2e57",
+          "title": "GET API Request Tests",
+          "fullFile": "/Users/hemilturakhia/Desktop/api-testing-axios-mocha-chai-javascript/api-test/get_request.js",
+          "file": "/api-test/get_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to get user list",
+              "fullTitle": "GET API Request Tests should be able to get user list",
+              "timedOut": false,
+              "duration": 120,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.get(properties.get(\"baseUri\") +'/users?page=2')\nconsole.log(res.data);\nexpect(res.data.page).equal(2)\nexpect(res.data.per_page).equal(6)",
+              "err": {},
+              "uuid": "83d0cee8-4929-4335-99a4-d2cb2aa21e41",
+              "parentUUID": "f98c258b-4b55-42bd-8c15-f5cf4e7f2e57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83d0cee8-4929-4335-99a4-d2cb2aa21e41"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 120,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ee052e7a-ea6d-4234-95c7-0fb51a3ed5d8",
+          "title": "POST API Request Tests",
+          "fullFile": "/Users/hemilturakhia/Desktop/api-testing-axios-mocha-chai-javascript/api-test/post_request.js",
+          "file": "/api-test/post_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to post user details",
+              "fullTitle": "POST API Request Tests should be able to post user details",
+              "timedOut": false,
+              "duration": 511,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const randomName = faker.name.firstName();\nconst randomJobTitle = faker.name.jobTitle();\nconst res = await axios.post(properties.get(\"baseUri\") + '/users',\n{\n    \"name\": randomName,\n    \"job\": randomJobTitle\n})\nconsole.log(res.data);\nexpect(res.data.name).equal(randomName)\nexpect(res.data.job).equal(randomJobTitle)",
+              "err": {},
+              "uuid": "099923b0-8cf9-41bc-9246-d2c7d9397cb6",
+              "parentUUID": "ee052e7a-ea6d-4234-95c7-0fb51a3ed5d8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "099923b0-8cf9-41bc-9246-d2c7d9397cb6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 511,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

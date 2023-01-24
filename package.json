@@ -1,0 +1,29 @@
+{
+  "name": "api-testing-axios-mocha-chai-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean" : "rimraf mochawesome-report/",
+    "test": "npx mocha ./api-test/*.js --reporter mochawesome"
+  },
+  "keywords": [
+    "api",
+    "automation",
+    "axio",
+    "mocha",
+    "chai",
+    "javascript"
+  ],
+  "author": "Code with Hemil",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "axios": "^1.2.3",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "properties-reader": "^2.2.0",
+    "rimraf": "^4.1.1"
+  }
+}
